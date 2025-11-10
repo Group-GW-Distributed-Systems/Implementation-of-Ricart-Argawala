@@ -1,4 +1,4 @@
-package Implementation_of_Ricart_Argawala
+package client
 
 import "fmt"
 
