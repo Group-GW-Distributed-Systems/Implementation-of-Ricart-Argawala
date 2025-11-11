@@ -1,0 +1,33 @@
+Main 2:
+PS C:\Users\dajap\OneDrive\ITU\3. semester\Distributed Systems\Assignment 4\Nikolais repo\Implementation-of-Ricart-Argawala> go run client/main.go
+Type port address to listen at: 5002
+Type other ports to connect to: 5001 5003 5004
+Commands: req | exit
+> 2025/11/11 01:48:23 Node listening on 127.0.0.1:5002
+2025/11/11 01:48:42 [RECV_REQ] from=5001 -> defer=false SEND_REPLY me={id=5002 state=0} lamport:0->2(send=3)
+2025/11/11 01:48:42 [DIAL_ON_DEMAND_OK] 127.0.0.1:5001
+2025/11/11 01:48:42 [SEND_OK] reply -> 5001
+req
+2025/11/11 01:48:45 [REQ] node=5002 ts=4 broadcast to [5001 5003 5004]
+2025/11/11 01:48:45 [SEND_OK] req -> 5001
+2025/11/11 01:48:45 [DIAL_ON_DEMAND_OK] 127.0.0.1:5003
+2025/11/11 01:48:45 [DIAL_ON_DEMAND_OK] 127.0.0.1:5004
+2025/11/11 01:48:45 [RECV_REP] from=5001 lamport:4->10
+2025/11/11 01:48:45 [RECV_REP] from=5003 lamport:10->11
+2025/11/11 01:48:45 [SEND_OK] req -> 5003
+2025/11/11 01:48:45 [SEND_OK] req -> 5004
+2025/11/11 01:48:45 [RECV_REP] from=5004 lamport:11->12
+2025/11/11 01:48:45 [GOT_ALL] node=5002 ts=4
+2025/11/11 01:48:45 [CS] 5002 ENTER
+2025/11/11 01:48:47 [RECV_REQ] from=5003 -> defer=true me={id=5002 state=2 myTs=4} lamport:12->13
+2025/11/11 01:48:47 [CS] 5002 EXIT
+2025/11/11 01:48:47 [FLUSH] reply -> 5003 (deferred)
+> 2025/11/11 01:48:49 [RECV_REQ] from=5004 -> defer=false SEND_REPLY me={id=5002 state=0} lamport:14->15(send=16)
+2025/11/11 01:48:49 [SEND_OK] reply -> 5004
+2025/11/11 01:48:53 [RECV_REQ] from=5001 -> defer=false SEND_REPLY me={id=5002 state=0} lamport:16->17(send=18)
+2025/11/11 01:48:53 [SEND_OK] reply -> 5001
+2025/11/11 01:49:02 [RECV_REQ] from=5004 -> defer=false SEND_REPLY me={id=5002 state=0} lamport:18->24(send=25)
+2025/11/11 01:49:02 [SEND_OK] reply -> 5004
+2025/11/11 01:49:03 [RECV_REQ] from=5001 -> defer=false SEND_REPLY me={id=5002 state=0} lamport:25->29(send=30)
+2025/11/11 01:49:03 [SEND_OK] reply -> 5001
+exit

@@ -1,0 +1,51 @@
+Main 1:
+PS C:\Users\dajap\OneDrive\ITU\3. semester\Distributed Systems\Assignment 4\Nikolais repo\Implementation-of-Ricart-Argawala> go run client/main.go
+Type port address to listen at: 5001
+Type other ports to connect to: 5002 5003 5004
+Commands: req | exit
+> 2025/11/11 01:48:14 Node listening on 127.0.0.1:5001
+req
+2025/11/11 01:48:42 [REQ] node=5001 ts=1 broadcast to [5002 5003 5004]
+2025/11/11 01:48:42 [DIAL_ON_DEMAND_OK] 127.0.0.1:5003
+2025/11/11 01:48:42 [DIAL_ON_DEMAND_OK] 127.0.0.1:5004
+2025/11/11 01:48:42 [DIAL_ON_DEMAND_OK] 127.0.0.1:5002
+2025/11/11 01:48:42 [SEND_OK] req -> 5004
+2025/11/11 01:48:42 [RECV_REP] from=5003 lamport:1->4
+2025/11/11 01:48:42 [SEND_OK] req -> 5003
+2025/11/11 01:48:42 [RECV_REP] from=5004 lamport:4->5
+2025/11/11 01:48:42 [SEND_OK] req -> 5002
+2025/11/11 01:48:42 [RECV_REP] from=5002 lamport:5->6
+2025/11/11 01:48:42 [GOT_ALL] node=5001 ts=1
+2025/11/11 01:48:42 [CS] 5001 ENTER
+2025/11/11 01:48:44 [CS] 5001 EXIT
+> 2025/11/11 01:48:45 [RECV_REQ] from=5002 -> defer=false SEND_REPLY me={id=5001 state=0} lamport:7->8(send=9)
+2025/11/11 01:48:45 [SEND_OK] reply -> 5002
+2025/11/11 01:48:47 [RECV_REQ] from=5003 -> defer=false SEND_REPLY me={id=5001 state=0} lamport:9->10(send=11)
+2025/11/11 01:48:47 [SEND_OK] reply -> 5003
+2025/11/11 01:48:49 [RECV_REQ] from=5004 -> defer=false SEND_REPLY me={id=5001 state=0} lamport:11->12(send=13)
+2025/11/11 01:48:49 [SEND_OK] reply -> 5004
+req
+2025/11/11 01:48:53 [REQ] node=5001 ts=14 broadcast to [5002 5003 5004]
+2025/11/11 01:48:53 [SEND_OK] req -> 5002
+2025/11/11 01:48:53 [SEND_OK] req -> 5004
+2025/11/11 01:48:53 [RECV_REP] from=5003 lamport:14->20
+2025/11/11 01:48:53 [RECV_REP] from=5004 lamport:20->23
+2025/11/11 01:48:53 [RECV_REP] from=5002 lamport:23->24
+2025/11/11 01:48:53 [SEND_OK] req -> 5003
+2025/11/11 01:48:53 [GOT_ALL] node=5001 ts=14
+2025/11/11 01:48:53 [CS] 5001 ENTER
+2025/11/11 01:48:55 [CS] 5001 EXIT
+> req2025/11/11 01:49:02 [RECV_REQ] from=5004 -> defer=false SEND_REPLY me={id=5001 state=0} lamport:25->26(send=27)
+2025/11/11 01:49:02 [SEND_OK] reply -> 5004
+
+2025/11/11 01:49:03 [REQ] node=5001 ts=28 broadcast to [5002 5003 5004]
+2025/11/11 01:49:03 [SEND_OK] req -> 5003
+2025/11/11 01:49:03 [RECV_REP] from=5003 lamport:28->31
+2025/11/11 01:49:03 [SEND_OK] req -> 5002
+2025/11/11 01:49:03 [RECV_REP] from=5002 lamport:31->32
+2025/11/11 01:49:03 [SEND_OK] req -> 5004
+2025/11/11 01:49:04 [RECV_REP] from=5004 lamport:32->33
+2025/11/11 01:49:04 [GOT_ALL] node=5001 ts=28
+2025/11/11 01:49:04 [CS] 5001 ENTER
+2025/11/11 01:49:06 [CS] 5001 EXIT
+> exit

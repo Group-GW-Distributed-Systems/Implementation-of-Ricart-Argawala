@@ -1,0 +1,42 @@
+Main 4:
+PS C:\Users\dajap\OneDrive\ITU\3. semester\Distributed Systems\Assignment 4\Nikolais repo\Implementation-of-Ricart-Argawala> go run client/main.go
+Type port address to listen at: 5004
+Type other ports to connect to: 5001 5002 5003
+Commands: req | exit
+> 2025/11/11 01:48:37 Node listening on 127.0.0.1:5004
+2025/11/11 01:48:42 [RECV_REQ] from=5001 -> defer=false SEND_REPLY me={id=5004 state=0} lamport:0->2(send=3)
+2025/11/11 01:48:42 [DIAL_ON_DEMAND_OK] 127.0.0.1:5001
+2025/11/11 01:48:42 [SEND_OK] reply -> 5001
+2025/11/11 01:48:45 [RECV_REQ] from=5002 -> defer=false SEND_REPLY me={id=5004 state=0} lamport:3->5(send=6)
+2025/11/11 01:48:45 [DIAL_ON_DEMAND_OK] 127.0.0.1:5002
+2025/11/11 01:48:45 [SEND_OK] reply -> 5002
+2025/11/11 01:48:47 [RECV_REQ] from=5003 -> defer=false SEND_REPLY me={id=5004 state=0} lamport:6->8(send=9)
+2025/11/11 01:48:47 [DIAL_ON_DEMAND_OK] 127.0.0.1:5003
+2025/11/11 01:48:47 [SEND_OK] reply -> 5003
+req
+2025/11/11 01:48:49 [REQ] node=5004 ts=10 broadcast to [5001 5002 5003]
+2025/11/11 01:48:49 [SEND_OK] req -> 5002
+2025/11/11 01:48:49 [RECV_REP] from=5002 lamport:10->17
+2025/11/11 01:48:49 [SEND_OK] req -> 5001
+2025/11/11 01:48:49 [SEND_OK] req -> 5003
+2025/11/11 01:48:49 [RECV_REP] from=5001 lamport:17->18
+2025/11/11 01:48:49 [RECV_REP] from=5003 lamport:18->19
+2025/11/11 01:48:49 [GOT_ALL] node=5004 ts=10
+2025/11/11 01:48:49 [CS] 5004 ENTER
+2025/11/11 01:48:51 [CS] 5004 EXIT
+> 2025/11/11 01:48:53 [RECV_REQ] from=5001 -> defer=false SEND_REPLY me={id=5004 state=0} lamport:20->21(send=22)
+2025/11/11 01:48:53 [SEND_OK] reply -> 5001
+req
+2025/11/11 01:49:02 [REQ] node=5004 ts=23 broadcast to [5001 5002 5003]
+2025/11/11 01:49:02 [RECV_REP] from=5002 lamport:23->26
+2025/11/11 01:49:02 [SEND_OK] req -> 5002
+2025/11/11 01:49:02 [SEND_OK] req -> 5003
+2025/11/11 01:49:02 [RECV_REP] from=5003 lamport:26->27
+2025/11/11 01:49:02 [SEND_OK] req -> 5001
+2025/11/11 01:49:02 [RECV_REP] from=5001 lamport:27->28
+2025/11/11 01:49:02 [GOT_ALL] node=5004 ts=23
+2025/11/11 01:49:02 [CS] 5004 ENTER
+2025/11/11 01:49:03 [RECV_REQ] from=5001 -> defer=true me={id=5004 state=2 myTs=23} lamport:28->29
+2025/11/11 01:49:04 [CS] 5004 EXIT
+2025/11/11 01:49:04 [FLUSH] reply -> 5001 (deferred)
+> exit
