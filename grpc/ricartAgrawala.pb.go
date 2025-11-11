@@ -4,7 +4,7 @@
 // 	protoc        v6.32.1
 // source: ricartAgrawala.proto
 
-package grpc
+package ricartAgrawala
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -203,7 +203,7 @@ const file_ricartAgrawala_proto_rawDesc = "" +
 	"\x02ok\x18\x01 \x01(\bR\x02ok2\x84\x01\n" +
 	"\x0eRicartagrawala\x12:\n" +
 	"\aRequest\x12\x1a.ricartAgrawala.RequestMsg\x1a\x13.ricartAgrawala.Ack\x126\n" +
-	"\x05Reply\x12\x18.ricartAgrawala.ReplyMsg\x1a\x13.ricartAgrawala.AckBpZngithub.com/Group-GW-Distributed-Systems/Implementation-of-Ricart-Argawala/blob/main/grpc/ricart-argawala.protob\x06proto3"
+	"\x05Reply\x12\x18.ricartAgrawala.ReplyMsg\x1a\x13.ricartAgrawala.AckB\x12Z\x10.;ricartAgrawalab\x06proto3"
 
 var (
 	file_ricartAgrawala_proto_rawDescOnce sync.Once

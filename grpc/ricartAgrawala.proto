@@ -1,7 +1,8 @@
 syntax = "proto3";
 
 package ricartAgrawala;
-option go_package = "github.com/Group-GW-Distributed-Systems/Implementation-of-Ricart-Argawala/blob/main/grpc/ricart-argawala.proto";
+option go_package = ".;ricartAgrawala";
+
 
 service Ricartagrawala {
   // En node beder alle andre om tilladelse til CS

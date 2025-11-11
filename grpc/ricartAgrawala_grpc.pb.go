@@ -4,7 +4,7 @@
 // - protoc             v6.32.1
 // source: ricartAgrawala.proto
 
-package grpc
+package ricartAgrawala
 
 import (
 	context "context"
